@@ -53,9 +53,3 @@ def run_server(file_name):
         
         print("Shutdown complete.")
         sys.exit(0)
-
-
-if __name__ == "__main__":
-    # The if __name__ == "__main__": guard is crucial for using the
-    # multiprocessing module correctly on all platforms.
-    run_server("/home/sagnik/main.py")
