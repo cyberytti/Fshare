@@ -22,6 +22,19 @@
 
 ---
 
+---
+
+## 🎯 **Why Choose Fshare?**  
+
+| Feature        | Fshare | WeTransfer | Google Drive |  
+|---------------|--------|------------|-------------|  
+| **No Signup**  | ✅ Yes | ❌ No      | ❌ No        |  
+| **No Limits**  | ✅ Yes | ❌ 2GB Max | ❌ 15GB Max  |  
+| **Privacy**    | ✅ Full Control | ❌ Uploads Files | ❌ Uploads Files |  
+| **Speed**      | ⚡ Direct Transfer | 🐢 Upload Required | 🐢 Upload Required |  
+
+---
+
 ## 🛠 **Installation**  
 
 ### **Method 1: Using Docker (Recommended)**  
@@ -126,15 +139,4 @@ Want to improve Fshare? Contributions are welcome!
 
 📌 **GitHub**: [https://github.com/cyberytti/Fshare](https://github.com/cyberytti/Fshare)
 
----
 
-## 🎯 **Why Choose Fshare?**  
-
-| Feature        | Fshare | WeTransfer | Google Drive |  
-|---------------|--------|------------|-------------|  
-| **No Signup**  | ✅ Yes | ❌ No      | ❌ No        |  
-| **No Limits**  | ✅ Yes | ❌ 2GB Max | ❌ 15GB Max  |  
-| **Privacy**    | ✅ Full Control | ❌ Uploads Files | ❌ Uploads Files |  
-| **Speed**      | ⚡ Direct Transfer | 🐢 Upload Required | 🐢 Upload Required |  
-
----
