@@ -1,127 +1,161 @@
-# 🚀 Fshare - Instant File Sharing Tool  
 
 <p align="center">
-  <img src="logo/fshare_logo.png" alt="LLM MCQ Evaluator Logo" width="300" height="300"/>
+  <img src="logo/fshare_logo.png" alt="Fshare Logo" width="300" height="300"/>
 </p>
 
-**Fshare** is a powerful, open-source CLI tool designed to share files and directories instantly from your terminal to anywhere in the world. Built with Python, Flask, and Pinggy.io, it simplifies file sharing with just one command—no complex setup required.  
+<h1 align="center">Fshare: Instant File Sharing</h1>
+
+<p align="center">
+  <strong>Share files and directories directly from your terminal. Instantly. Securely. For free.</strong>
+  <br />
+  <br />
+  <a href="https://github.com/cyberytti/Fshare/issues">Report Bug</a>
+  ·
+  <a href="https://github.com/cyberytti/Fshare/issues">Request Feature</a>
+</p>
+
+<p align="center">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
+    <img src="https://img.shields.io/badge/version-v1.0-brightgreen" alt="Version">
+    <img src="https://img.shields.io/docker/pulls/sagnikbose/fshare.svg" alt="Docker Pulls">
+    <img src="https://img.shields.io/badge/built%20with-Python%20%26%20Flask-red" alt="Built with Python & Flask">
+</p>
+
+---
+
+**Fshare** is a powerful, open-source CLI tool that lets you share files and directories from your terminal to anywhere in the world with a single command. Built with Python, Flask, and [Pinggy.io](https://pinggy.io), it eliminates the need for complex setups, cloud uploads, or sign-up forms.
+
+## ✨ See It in Action
+
+![Fshare Demo GIF](https://user-images.githubusercontent.com/.../fshare-demo.gif) 
+*(Note: This is a placeholder for a demo GIF. Creating one would be a great addition!)*
+
+---
+
+## 🤔 Why Fshare? Tired of Slow Uploads and Sign-up Forms?
+
+| Feature                | <img src="logo/fshare_logo.png" width="20"> Fshare | WeTransfer     | Google Drive   |
+| ---------------------- | :-------------------------------------------------: | :------------: | :------------: |
+| **No Sign-Up Required**|                        ✅ Yes                       |     ❌ No      |     ❌ No      |
+| **No File Size Limits**|                        ✅ Yes                       |   ❌ 2GB Max   |  ❌ 15GB Max   |
+| **Absolute Privacy**   |                  ✅ Stays on your PC                  | ❌ Uploads Files | ❌ Uploads Files |
+| **Transfer Speed**     |                 ⚡ **Direct P2P**                  | 🐢 Upload First | 🐢 Upload First |
+| **From Your Terminal** |                        ✅ Yes                       |     ❌ No      |     ❌ No      |
 
 ---
 
 ## 🚀 Key Features
 
-- ⚡ **Instant Sharing**: Share files or folders with one command.
-- ✅ No File Size Limits – Share large files without restrictions.
-- 📁 **Multiple Files & Directories**: Send anything — single file, multiple files, or entire folders.
-- 🌐 **Internet Ready**: Works beyond local networks using [Pinggy.io](https://pinggy.io) tunnels.
-- 🗜️ **Automatic Compression**: When sharing multiple files or directories, Fshare automatically compresses them into a ZIP archive.
-- 🧠 **Smart Interface**: Intuitive CLI with rich visuals using `Typer` and `Rich`.
-- 🔒 **File Quality Preserved**: No downscaling or format conversion.
-- 🐳 **Dockerized**: Fully containerized option with a bash wrapper for easy use.
-- 🧩 **Modular & Maintainable Codebase**: Clean separation of backend, CLI, and tunneling logic.
+| Feature                       | Description                                                                                             |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------- |
+| ⚡ **Instant Sharing**         | Go from file to shareable link in seconds with one command.                                             |
+| 📁 **Share Anything**         | Share a single file, multiple files, or entire directories effortlessly.                                |
+| 🌐 **Global Reach**           | Powered by [Pinggy.io](https://pinggy.io) tunnels, your files are accessible from anywhere, not just your local network. |
+| 🗜️ **Automatic Compression**  | Multiple files or directories? Fshare automatically zips them for a single, convenient download.        |
+| 🧠 **Intuitive CLI**          | A beautiful and smart command-line interface built with `Typer` and `Rich`.                             |
+| 🔒 **Preserves Quality**      | Your files are transferred bit-for-bit. No compression artifacts, no downscaling.                       |
+| 🐳 **Dockerized**             | Run Fshare in a fully containerized environment with a simple bash wrapper. No dependency hell.         |
 
 ---
 
+## 🛠️ Getting Started in 60 Seconds
+
+### Prerequisites
+-   [Docker](https://www.docker.com/get-started) must be installed and running.
+
+### Installation
+Follow these simple steps to get Fshare up and running.
+
+1.  **Pull the Docker Image**
+    ```bash
+    # Pull the latest stable version of Fshare
+    docker pull sagnikbose/fshare:v1.0
+    ```
+
+2.  **Download the Launcher Script**
+    ```bash
+    # Download the official fshare.sh wrapper
+    curl -O https://raw.githubusercontent.com/cyberytti/Fshare/main/fshare.sh
+    ```
+
+3.  **Make it Executable**
+    ```bash
+    # Grant execute permissions to the script
+    chmod +x fshare.sh
+    ```
+    > **Pro Tip:** Move `fshare.sh` to your system's path (e.g., `/usr/local/bin/fshare`) to run it from anywhere with just `fshare` instead of `./fshare.sh`.
+
 ---
 
-## 🎯 **Why Choose Fshare?**  
+## 🚦 Usage Examples
 
-| Feature        | Fshare | WeTransfer | Google Drive |  
-|---------------|--------|------------|-------------|  
-| **No Signup**  | ✅ Yes | ❌ No      | ❌ No        |  
-| **No Limits**  | ✅ Yes | ❌ 2GB Max | ❌ 15GB Max  |  
-| **Privacy**    | ✅ Full Control | ❌ Uploads Files | ❌ Uploads Files |  
-| **Speed**      | ⚡ Direct Transfer | 🐢 Upload Required | 🐢 Upload Required |  
+Once you run a command, Fshare will start a server and generate a public URL. Share this link with anyone. **Press `CTRL+C` to stop sharing.**
 
-
-
----
-
-## 🛠 **Installation**
-
-### ✅ **Recommended: Using Docker**
-
+### Sharing a Single File
 ```bash
-# Pull the latest Fshare Docker image
-docker pull sagnikbose/fshare:v1.0
-
-# Download the launcher script
-curl -O https://raw.githubusercontent.com/cyberytti/Fshare/main/fshare.sh
-
-# Make the script executable
-chmod +x fshare.sh
+# Usage
+./fshare.sh document.pdf
 ```
 
-
-## 🚦 **Usage**  
-
-### **Sharing a Single File**  
+### Sharing Multiple Files
 ```bash
-./fshare.sh document.pdf  
-```  
+# Fshare will automatically zip them
+./fshare.sh image.png song.mp3 presentation.pptx
+```
 
-### **Sharing Multiple Files**  
+### Sharing an Entire Directory
 ```bash
-./fshare.sh file1.txt file2.jpg file3.pdf  
-```  
-
-### **Sharing a Directory**  
-```bash
-./fshare.sh any_folder
-```  
-
-### **Help Command**  
-```bash
-./fshare.sh --help  
-```  
+# The 'my_project' folder will be zipped and shared
+./fshare.sh my_project/
+```
 
 ---
 
-## 📌 **How It Works**  
+## ⚙️ How It Works
 
-1. **Local Server Setup** – Fshare starts a local Flask server to host your files.  
-2. **Internet Exposure** – Uses Pinggy.io to create a public URL via SSH tunneling.  
-3. **Secure & Temporary** – The link expires when you stop the server (CTRL+C).  
-4. **Compression (if needed)** – Automatically zips multiple files/directories.  
-
----
-
-## 🛡 **Security & Privacy**  
-
-🔒 **No Uploads to Third-Party Servers** – Files stay on your machine.  
-🔒 **No Permanent Storage** – Links expire when the session ends.  
-🔒 **Local-Only by Default** – Internet exposure is opt-in.  
+1.  **🖥️ Local Server:** Fshare spins up a lightweight Flask web server on your machine to serve the selected files.
+2.  **tunneling:** It uses [Pinggy.io](https://pinggy.io) to create a secure SSH tunnel, exposing your local server to the internet with a public, random URL.
+3.  **🗜️ Smart Archiving:** If you share multiple files or a directory, Fshare creates a temporary `.zip` archive on the fly. This archive is cleaned up automatically when you stop the server.
+4.  **🛑 Temporary by Design:** The shareable link is active **only** as long as your Fshare process is running. As soon as you press `CTRL+C`, the server and the tunnel shut down, and the link becomes inactive.
 
 ---
 
-## 🤔 **FAQ**  
+## 🛡️ Your Files, Your Control: Security & Privacy
 
-### ❓ **Is Fshare free?**  
-✅ **Yes!** Fshare is completely free and open-source.  
-
-### ❓ **Can I share large files (>1GB)?**  
-✅ **Yes!** Unlike many cloud services, Fshare has no file size limits.  
-
-### ❓ **How long do shared links last?**  
-⏳ **Until you stop the server** (CTRL+C). No permanent storage.  
-
-### ❓ **Does it work on Windows?**  
-✅ **Yes**, via WSL (Windows Subsystem for Linux).  
+-   **✅ No Third-Party Uploads:** Your files are streamed directly from your computer to the recipient. They are never stored on any intermediate server.
+-   **✅ Ephemeral Links:** Links expire the moment you terminate the session. No forgotten files lingering in the cloud.
+-   **✅ You Are the Host:** You have full control and visibility over the sharing process.
 
 ---
 
-## 📜 **License**  
-MIT License – Free for personal and commercial use.  
+## ❓ FAQ
+
+> **Is Fshare free?**
+
+Absolutely! Fshare is 100% free and open-source under the MIT License.
+
+> **Can I share large files, like video exports or disk images?**
+
+Yes! There are **no file size limits** imposed by Fshare. Your transfer speed is only limited by your own network bandwidth.
+
+> **How long do the shared links last?**
+
+The links are temporary and last only until you stop the server by pressing `CTRL+C` in your terminal.
+
+> **Does it work on Windows?**
+
+Yes, Fshare works perfectly on Windows via the **Windows Subsystem for Linux (WSL)**.
 
 ---
 
-## 🚀 **Contribute**  
-Want to improve Fshare? Contributions are welcome!  
+## 🤝 Contributing & License
 
-🔹 **Report Bugs** – Open an issue.  
-🔹 **Suggest Features** – Submit a PR.  
-🔹 **Star the Repo** – Show your support!  
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-📌 **GitHub**: [https://github.com/cyberytti/Fshare](https://github.com/cyberytti/Fshare)
+-   ⭐ **Star the Repo** on [GitHub](https://github.com/cyberytti/Fshare)!
+-   🐞 **Report a Bug** by opening an issue.
+-   💡 **Suggest a Feature** or submit a Pull Request.
 
+This project is licensed under the **MIT License**. See the `LICENSE` file for more details.
 
+<p align="right">(<a href="#top">back to top</a>)</p>
