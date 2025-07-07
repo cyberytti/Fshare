@@ -33,40 +33,25 @@
 | **Privacy**    | ✅ Full Control | ❌ Uploads Files | ❌ Uploads Files |  
 | **Speed**      | ⚡ Direct Transfer | 🐢 Upload Required | 🐢 Upload Required |  
 
----
 
-## 🛠 **Installation**  
-
-### **Method 1: Using Docker (Recommended)**  
-
-```bash
-# Clone the repository  
-git clone https://github.com/your-repo/fshare.git  
-
-# Navigate to the project directory  
-cd fshare  
-
-# Build the Docker image  
-docker build -t fshare-cli .  
-
-# Run Fshare (alias for convenience)  
-alias fshare='docker run -it --rm -v "$(pwd)":/data fshare-cli'  
-
-# Share a file  
-fshare myfile.pdf  
-```
-
-### **Method 2: Manual Setup (Python)**  
-
-```bash
-# Install dependencies  
-pip install flask typer rich  
-
-# Run directly  
-python cli_app.py share myfile.pdf  
-```
 
 ---
+
+## 🛠 **Installation**
+
+### ✅ **Recommended: Using Docker**
+
+```bash
+# Pull the latest Fshare Docker image
+docker pull sagnikbose/fshare:v1.0
+
+# Download the launcher script
+curl -O https://raw.githubusercontent.com/cyberytti/Fshare/main/fshare.sh
+
+# Make the script executable
+chmod +x fshare.sh
+```
+
 
 ## 🚦 **Usage**  
 
