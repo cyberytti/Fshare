@@ -229,10 +229,10 @@ def share(
     uploading them to cloud services.
     
     [yellow]Examples:[/yellow]
-    • fshare document.pdf
-    • fshare photo.jpg video.mp4 
-    • fshare my_folder/
-    • fshare file1.txt file2.txt --verbose
+    • fshare share document.pdf
+    • fshare share photo.jpg video.mp4 
+    • fshare share my_folder/
+    • fshare share file1.txt file2.txt
     """
     
     # Display enhanced welcome banner
