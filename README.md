@@ -180,7 +180,7 @@ The links are temporary and last only until you stop the server by pressing `CTR
 
 > **Does it work on Windows?**
 
-Yes, Fshare works perfectly on Windows via the **Windows Subsystem for Linux (WSL)**.
+Yes, Fshare works perfectly on Windows .
 
 ---
 
