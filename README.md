@@ -54,61 +54,97 @@
 | 🗜️ **Automatic Compression**  | Multiple files or directories? Fshare automatically zips them for a single, convenient download.        |
 | 🧠 **Intuitive CLI**          | A beautiful and smart command-line interface built with `Typer` and `Rich`.                             |
 | 🔒 **Preserves Quality**      | Your files are transferred bit-for-bit. No compression artifacts, no downscaling.                       |
-| 🐳 **Dockerized**             | Run Fshare in a fully containerized environment with a simple bash wrapper. No dependency hell.         |
+
 
 ---
 
-## 🛠️ Getting Started in 60 Seconds
+# Installation
 
-### Prerequisites
--   [Docker](https://www.docker.com/get-started) must be installed and running.
+## Prerequisites
 
-### Installation
-Follow these simple steps to get Fshare up and running.
+Before installing Fshare, ensure you have the following installed on your system:
+- Python 3.x
+- Git
+- pip (Python package installer)
 
-1.  **Pull the Docker Image**
-    ```bash
-    # Pull the latest stable version of Fshare
-    docker pull sagnikbose/fshare:v1.0
-    ```
+## Manual Installation
 
-2.  **Download the Launcher Script**
-    ```bash
-    # Download the official fshare.sh wrapper
-    curl -O https://raw.githubusercontent.com/cyberytti/Fshare/main/fshare.sh
-    ```
+### 1. Clone the Repository
 
-3.  **Make it Executable**
-    ```bash
-    # Grant execute permissions to the script
-    chmod +x fshare.sh
-    ```
-    > **Pro Tip:** Move `fshare.sh` to your system's path (e.g., `/usr/local/bin/fshare`) to run it from anywhere with just `fshare` instead of `./fshare.sh`.
-
----
-
-## 🚦 Usage Examples
-
-Once you run a command, Fshare will start a server and generate a public URL. Share this link with anyone. **Press `CTRL+C` to stop sharing.**
-
-### Sharing a Single File
 ```bash
-# Usage
-./fshare.sh document.pdf
+git clone https://github.com/cyberytti/Fshare
 ```
 
-### Sharing Multiple Files
+### 2. Navigate to Project Directory
+
 ```bash
-# Fshare will automatically zip them
-./fshare.sh image.png song.mp3 presentation.pptx
+cd Fshare
 ```
 
-### Sharing an Entire Directory
+### 3. Install Dependencies
+
 ```bash
-# The 'my_project' folder will be zipped and shared
-./fshare.sh my_project/
+pip install -r requirements.txt
 ```
 
+### 4. Run the Tool
+
+After successful installation, you can run the tool using:
+
+```bash
+python3 fshare.py --help
+```
+
+## Making Fshare Globally Accessible (Optional)
+
+To use Fshare as a global command (like `apt` or `git`) from anywhere in your terminal, follow these steps:
+
+### 1. Install Nuitka
+
+```bash
+pip install nuitka
+```
+
+### 2. Create Executable
+
+```bash
+python -m nuitka --onefile fshare.py
+```
+
+Upon successful compilation, you'll see the message:
+```
+Nuitka: Successfully created 'fshare.bin'.
+```
+
+### 3. Rename the Executable
+
+```bash
+cp fshare.bin fshare
+```
+
+### 4. Move to System Executables Directory
+
+Move the executable to your system's executable directory:
+
+**Linux/macOS:**
+```bash
+sudo mv fshare /usr/bin/
+```
+
+**Windows:**
+Move the `fshare.exe` file to a directory in your system's PATH, such as:
+- `C:\Windows\System32\`
+- Or add the current directory to your PATH environment variable
+
+### 5. Verify Global Installation
+
+Test the global installation by running:
+
+```bash
+fshare --help
+```
+
+You should now be able to use Fshare from any directory in your terminal.
 ---
 
 ## ⚙️ How It Works
